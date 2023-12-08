@@ -1,5 +1,18 @@
 # remix-routes
 
+## 2.0.0
+
+### Major Changes
+
+- 486f9ff: Complete rebranding.
+- 486f9ff: Rebrand the project to my username.
+
+### Patch Changes
+
+- b555abe: Small changes.
+- Updated dependencies [486f9ff]
+  - @ignisda/typescript-remix-routes-plugin@2.0.0
+
 ## 1.5.0
 
 ### Minor Changes
