@@ -146,36 +146,6 @@ export default function Component() {
 - `-s`: Enale strict mode. In strict mode only routes that define `SearchParams` type are allowed to have query string.
 - `-o`: Specify the output path for `remix-routes.d.ts`. Defaults to `./node_modules` if arg is not given.
 
-## TypeScript Integration
-
-A TypeScript plugin is available to help you navigate between route files.
-
-### Installation
-
-```bash
-$ npm add -D @ignisda/typescript-remix-routes-plugin
-```
-
-### Setup
-
-Add the plugin to your `tsconfig.json`:
-
-```json
-{
-  "compilerOptions": {
-    "plugins": [
-      {
-        "name": "@ignisda/typescript-remix-routes-plugin"
-      }
-    ]
-  }
-}
-```
-
-Select workspace version of TypeScript in VSCode:
-
-<img width="685" alt="Screenshot 2022-12-02 at 5 56 39 pm" src="https://user-images.githubusercontent.com/465125/205244385-e8051e71-1fda-417a-80a5-107f551d4bcf.png">
-
 
 ## License
 
