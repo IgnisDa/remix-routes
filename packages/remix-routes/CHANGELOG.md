@@ -1,5 +1,11 @@
 # remix-routes
 
+## 3.2.0
+
+### Minor Changes
+
+- 9eca790: Change path of generated file.
+
 ## 3.1.0
 
 ### Minor Changes
