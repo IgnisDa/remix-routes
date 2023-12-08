@@ -1,5 +1,11 @@
 # remix-routes
 
+## 3.0.0
+
+### Major Changes
+
+- 81d23bb: Do not encode undefined or null parameters.
+
 ## 2.0.1
 
 ### Patch Changes
