@@ -1,5 +1,11 @@
 # remix-routes
 
+## 2.0.1
+
+### Patch Changes
+
+- 2c65890: Remove typescript plugin.
+
 ## 2.0.0
 
 ### Major Changes
