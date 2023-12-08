@@ -1,26 +1,29 @@
-# remix-routes
+# @ignisda/remix-routes
 
-`remix-routes` automatically generates typesafe helper functions for manipulating internal links in your Remix apps.
+> [!IMPORTANT]
+> This is a fork of [yesmeck's project](https://github.com/yesmeck/remix-routes).
+
+`@ignisda/remix-routes` automatically generates typesafe helper functions for manipulating internal links in your Remix apps.
 
 https://user-images.githubusercontent.com/465125/205243864-3493733d-8586-405f-94eb-088fdb87fd23.mp4
 
 ## Installation
 
 ```bash
-$ npm add remix-routes
+$ npm add @ignisda/remix-routes
 ```
 
 ## Setup
 
-Add `remix-routes` to your dev and build script in `package.json`.
+Add `@ignisda/remix-routes` to your dev and build script in `package.json`.
 
 **With [`concurrently`](https://www.npmjs.com/package/concurrently) package:**
 
 ```json
 {
   "scripts": {
-    "build": "remix-routes && remix build",
-    "dev": "concurrently \"remix-routes -w\" \"remix dev\""
+    "build": "@ignisda/remix-routes && remix build",
+    "dev": "concurrently \"@ignisda/remix-routes -w\" \"remix dev\""
   }
 }
 ```
@@ -31,9 +34,9 @@ Add `remix-routes` to your dev and build script in `package.json`.
 {
   "scripts": {
     "build": "run-s build:*",
-    "build:routes": "remix-routes",
+    "build:routes": "@ignisda/remix-routes",
     "dev": "run-p dev:*",
-    "dev:routes": "remix-routes -w",
+    "dev:routes": "@ignisda/remix-routes -w",
   }
 }
 ```
@@ -45,7 +48,7 @@ Add `remix-routes` to your dev and build script in `package.json`.
 ```typescript
 import type { ActionFunction } from 'remix';
 import { redirect } from 'remix';
-import { $path } from 'remix-routes'; // <-- Import magical $path helper from remix-routes.
+import { $path } from '@ignisda/remix-routes'; // <-- Import magical $path helper from remix-routes.
 
 export const action: ActionFunction = async ({ request }) => {
   let formData = await request.formData();
@@ -58,7 +61,7 @@ export const action: ActionFunction = async ({ request }) => {
 ### Appending query string:
 
 ```typescript
-import { $path } from 'remix-routes';
+import { $path } from '@ignisda/remix-routes';
 
 $path('/posts/:id', { id: 6 }, { version: 18 }); // => /posts/6?version=18
 $path('/posts', { limit: 10 }); // => /posts?limit=10
@@ -81,7 +84,7 @@ export type SearchParams = {
 ```
 
 ```typescript
-import { $path } from 'remix-routes';
+import { $path } from '@ignisda/remix-routes';
 
 // The query string is type-safe.
 $path('/posts', { view: 'list', sort: 'date', page: 1 });
@@ -114,7 +117,7 @@ export const loader = async (request) => {
 
 ```typescript
 import type { ActionFunction } from 'remix';
-import { $params } from 'remix-routes'; // <-- Import $params helper.
+import { $params } from '@ignisda/remix-routes'; // <-- Import $params helper.
 
 export const action: ActionFunction = async ({ params }) => {
   const { id } = $params("/posts/:id/update", params) // <-- It's type safe, try renaming `id` param.
@@ -128,7 +131,7 @@ export const action: ActionFunction = async ({ params }) => {
 remix-routes also export all route type definitions for your convenience.
 
 ```typescript
-import type { Routes } from 'remix-routes';
+import type { Routes } from '@ignisda/remix-routes';
 import { useParams } from "remix";
 
 export default function Component() {
@@ -150,7 +153,7 @@ A TypeScript plugin is available to help you navigate between route files.
 ### Installation
 
 ```bash
-$ npm add -D typescript-remix-routes-plugin
+$ npm add -D @ignisda/typescript-remix-routes-plugin
 ```
 
 ### Setup
@@ -162,7 +165,7 @@ Add the plugin to your `tsconfig.json`:
   "compilerOptions": {
     "plugins": [
       {
-        "name": "typescript-remix-routes-plugin"
+        "name": "@ignisda/typescript-remix-routes-plugin"
       }
     ]
   }
