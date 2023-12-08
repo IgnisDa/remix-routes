@@ -13,6 +13,16 @@ test("$path + query", () => {
 	expect($path("/posts", { order: "desc" })).toBe("/posts?order=desc");
 });
 
+test("$path + undefined queries", () => {
+	expect($path("/posts", { order: undefined })).toBe("/posts");
+	expect($path("/posts", { order: undefined, filter: "draft" })).toBe(
+		"/posts?filter=draft",
+	);
+	expect($path("/posts", { order: undefined, isDraft: false })).toBe(
+		"/posts?isDraft=false",
+	);
+});
+
 test("$path + array query", () => {
 	expect(
 		$path("/posts/delete", [

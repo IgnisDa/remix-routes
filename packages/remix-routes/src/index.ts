@@ -39,12 +39,19 @@ export function $path(route: string, ...paramsOrQuery: Array<any>) {
 			.join("/");
 	}
 
-	if (!query) {
-		return path;
+	if (!query) return path;
+
+	if (Array.isArray(query)) {
+		query = query.filter(([, value]) => value !== undefined && value !== null);
+	} else if (typeof query === "object") {
+		query = Object.fromEntries(
+			Object.entries(query).filter(
+				([, value]) => value !== undefined && value !== null,
+			),
+		);
 	}
-
+	if (Object.keys(query).length === 0) return path;
 	const searchParams = new URLSearchParams(query);
-
 	return path + "?" + searchParams.toString();
 }
 
