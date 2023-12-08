@@ -1,6 +1,6 @@
 {
   "name": "@ignisda/typescript-remix-routes-plugin",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "license": "MIT",
   "main": "./lib/index.js",
   "exports": {
