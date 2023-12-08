@@ -8,12 +8,15 @@
     "test": "vitest",
     "watch": "pnpm run --parallel watch",
     "ci:version": "changeset version",
-    "ci:publish": "pnpm publish -r"
+    "ci:publish": "pnpm publish -r",
+    "format": "npx @biomejs/biome format . --write",
+    "lint": "npx @biomejs/biome lint . --apply"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@biomejs/biome": "1.4.1",
     "@changesets/cli": "^2.26.0",
     "@ignisda/typescript-remix-routes-plugin": "workspace:*",
     "vitest": "^0.28.5"
