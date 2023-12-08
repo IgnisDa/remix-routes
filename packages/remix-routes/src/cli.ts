@@ -27,7 +27,7 @@ Options
 --outputDirPath, -o Specify the output path for "remix-routes.d.ts". Defaults to "./node_modules" if arg is not given.
 `;
 
-const DEFAULT_OUTPUT_DIR_PATH = "./node_modules/@ignisda/remix-routes";
+const DEFAULT_OUTPUT_DIR_PATH = "./app";
 
 const cli = meow(helpText, {
 	flags: {
