@@ -1,4 +1,4 @@
-export const template = `declare module "remix-routes" {
+export const template = `declare module "@ignisda/remix-routes" {
   type URLSearchParamsInit = string | string[][] | Record<string, string> | URLSearchParams;
   // symbol won't be a key of SearchParams
   type IsSearchParams<T> = symbol extends keyof T ? false : true;

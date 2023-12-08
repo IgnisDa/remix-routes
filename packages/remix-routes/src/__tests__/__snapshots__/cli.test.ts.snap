@@ -1,7 +1,7 @@
 // Vitest Snapshot v1
 
 exports[`build v1 routes 1`] = `
-"declare module \\"remix-routes\\" {
+"declare module \\"@ignisda/remix-routes\\" {
   type URLSearchParamsInit = string | string[][] | Record<string, string> | URLSearchParams;
   // symbol won't be a key of SearchParams
   type IsSearchParams<T> = symbol extends keyof T ? false : true;
@@ -227,7 +227,7 @@ exports[`build v1 routes 1`] = `
 `;
 
 exports[`build v2 routes 1`] = `
-"declare module \\"remix-routes\\" {
+"declare module \\"@ignisda/remix-routes\\" {
   type URLSearchParamsInit = string | string[][] | Record<string, string> | URLSearchParams;
   // symbol won't be a key of SearchParams
   type IsSearchParams<T> = symbol extends keyof T ? false : true;
