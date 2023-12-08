@@ -1,5 +1,11 @@
 # remix-routes
 
+## 3.1.0
+
+### Minor Changes
+
+- 3b98462: Set correct module names for declaration files.
+
 ## 3.0.0
 
 ### Major Changes
