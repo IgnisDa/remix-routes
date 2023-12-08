@@ -2,7 +2,7 @@
   "compilerOptions": {
     "plugins": [
       {
-        "name": "typescript-remix-routes-plugin"
+        "name": "@ignisda/typescript-remix-routes-plugin"
       }
     ],
     "target": "es2017",

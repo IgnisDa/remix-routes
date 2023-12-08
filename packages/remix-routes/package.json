@@ -41,7 +41,7 @@
     "meow": "9.0.0",
     "mkdirp": "^1.0.4",
     "slash": "3",
-    "typescript-remix-routes-plugin": "workspace:*"
+    "@ignisda/typescript-remix-routes-plugin": "workspace:*"
   },
   "repository": {
     "type": "git",

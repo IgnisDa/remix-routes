@@ -1,5 +1,5 @@
 import { expectTypeOf, test } from 'vitest';
-import { $params, $path, Routes } from "remix-routes";
+import { $params, $path, Routes } from "@ignisda/remix-routes";
 
 type URLSearchParamsInit = string | string[][] | Record<string, string> | URLSearchParams;
 
