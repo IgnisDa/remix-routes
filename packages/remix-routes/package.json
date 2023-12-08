@@ -1,7 +1,7 @@
 {
-  "name": "remix-routes",
+  "name": "@ignisda/remix-routes",
   "version": "1.5.0",
-  "description": "Typesafe routing for Remix apps.",
+  "description": "Typesafe routing for Remix apps [fork of remix-routes]",
   "main": "lib/index.js",
   "bin": {
     "remix-routes": "lib/cli.js"
@@ -22,7 +22,7 @@
     "routes",
     "typescript"
   ],
-  "author": "Wei Zhu",
+  "author": "Diptesh Choudhuri",
   "license": "MIT",
   "devDependencies": {
     "@remix-run/dev": "^1.16.1",
@@ -45,6 +45,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yesmeck/remix-routes.git"
+    "url": "https://github.com/ignisda/remix-routes.git"
   }
 }
