@@ -4,6 +4,13 @@
 
 ### Patch Changes
 
+- Updated dependencies [8707cd7]
+  - @ignisda/remix-routes@3.3.0
+
+## null
+
+### Patch Changes
+
 - Updated dependencies [9eca790]
   - @ignisda/remix-routes@3.2.0
 
