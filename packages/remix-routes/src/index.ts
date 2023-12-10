@@ -19,18 +19,12 @@ export function $path(route: string, ...paramsOrQuery: Array<any>) {
 			.map((fragment) => {
 				if (fragment.indexOf(":") > -1) {
 					let paramName = fragment.slice(1);
-					if (paramName.indexOf("?") > -1) {
-						paramName = paramName.slice(0, -1);
-					}
-					if (paramName in params) {
-						return params[paramName];
-					}
+					if (paramName.indexOf("?") > -1) paramName = paramName.slice(0, -1);
+					if (paramName in params) return encodeURIComponent(params[paramName]);
 					return null;
 				}
-				if (fragment == "*") {
-					if ("*" in params) {
-						return params["*"];
-					}
+				if (fragment === "*") {
+					if ("*" in params) return params["*"];
 					return null;
 				}
 				return fragment;
@@ -41,9 +35,9 @@ export function $path(route: string, ...paramsOrQuery: Array<any>) {
 
 	if (!query) return path;
 
-	if (Array.isArray(query)) {
+	if (Array.isArray(query))
 		query = query.filter(([, value]) => value !== undefined && value !== null);
-	} else if (typeof query === "object") {
+	else if (typeof query === "object") {
 		query = Object.fromEntries(
 			Object.entries(query).filter(
 				([, value]) => value !== undefined && value !== null,
@@ -52,7 +46,7 @@ export function $path(route: string, ...paramsOrQuery: Array<any>) {
 	}
 	if (Object.keys(query).length === 0) return path;
 	const searchParams = new URLSearchParams(query);
-	return path + "?" + searchParams.toString();
+	return `${path}?${searchParams.toString()}`;
 }
 
 export function $params(
