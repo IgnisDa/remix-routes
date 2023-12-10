@@ -1,5 +1,11 @@
 # remix-routes
 
+## 3.3.0
+
+### Minor Changes
+
+- 8707cd7: Encode parameters properly.
+
 ## 3.2.0
 
 ### Minor Changes
