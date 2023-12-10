@@ -7,6 +7,9 @@ test("$path", () => {
 
 test("$path + params", () => {
 	expect($path("/posts/:id", { id: 1 })).toBe("/posts/1");
+	expect($path("/posts/:id", { id: "3/4 situps" })).toBe(
+		"/posts/3%2F4%20situps",
+	);
 });
 
 test("$path + query", () => {
